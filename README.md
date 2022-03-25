@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @Chitralekhayaduvanshi
 - 👀 I’m interested in discovering the technology.
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
+- 🌱 I’m currently learning computer science.
+- 💞️ I’m looking to collaborate on cool ands amazing games.
 - 📫 How to reach me ...
 
 <!---
