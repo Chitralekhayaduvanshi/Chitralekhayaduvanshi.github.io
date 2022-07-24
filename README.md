@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @Chitralekhayaduvanshi, Homo sapien.
 - 👀 I’m interested in discovering the technology.
 - 🌱 I’m currently learning computer science.
-- 💞️ I’m looking to collaborate in Technical things
+- 💞️ I’m looking to collaborate in things related to intelligence with a pinch of craziness.
 - 📫 How to reach me ... here on Github and <a href="https://www.linkedin.com/in/chitralekha-y">LinkedIN</a>)
 
 <!---
