@@ -1,0 +1,138 @@
+import dynamic from 'next/dynamic'
+import Image from 'next/image'
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+
+const DynamicCarousel = dynamic(() => import('@/components/SkillsCarousel'), {
+  loading: () => <p>Loading skills...</p>,
+})
+
+const DynamicProjects = dynamic(() => import('@/components/Projects'), {
+  loading: () => <p>Loading projects...</p>,
+})
+
+export default function Home() {
+  return (
+    <div className="container mx-auto px-4">
+      <section id="about" className="py-20 text-center relative">
+        <div className="absolute inset-0 bg-[url('/images/luxury-pattern.jpg')] opacity-10 z-0"></div>
+        <div className="relative z-10">
+          <Image
+            src="/images/profile-photo.jpg"
+            alt="Chitralekha Yaduvanshi"
+            width={200}
+            height={200}
+            className="rounded-full mx-auto mb-6 border-4 border-white shadow-lg"
+          />
+          <h1 className="text-5xl font-bold mb-4 font-playfair">Chitralekha Yaduvanshi</h1>
+          <p className="text-2xl mb-6 font-montserrat font-light">Engineer</p>
+          <div className="flex justify-center space-x-4 mb-8">
+            <Button asChild className="font-montserrat">
+              <a href="mailto:chitralekha813@gmail.com">Contact Me</a>
+            </Button>
+            <Button variant="outline" asChild className="font-montserrat">
+              <a href="https://www.linkedin.com/in/chitralekha-y" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </Button>
+          </div>
+          <p className="max-w-2xl mx-auto text-lg font-montserrat">
+            Experienced Associate Engineer with a focus on leveraging analytical skills, strategic vision, and a user-centric approach to guide products from conception through launch. Skilled in fostering collaboration and driving product success across global teams.
+          </p>
+        </div>
+      </section>
+
+      <section id="experience" className="py-20 bg-white bg-opacity-80 backdrop-blur-md">
+        <h2 className="text-4xl font-bold mb-10 text-center font-playfair">Work Experience</h2>
+        <Card className="bg-white shadow-xl">
+          <CardHeader>
+            <CardTitle>Associate Engineer (Working Globally)</CardTitle>
+            <CardDescription>Larsen & Toubro (Digital Energy Solutions, PT&D) | 2022 - Present</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Developed comprehensive understanding of the power sector, leading to a 25% increase in product development efficiency and innovation.</li>
+              <li>Collaborated with cross-functional teams to generate new ideas and design scalable solutions, resulting in a 30% improvement in solution reliability and global scalability.</li>
+              <li>Built expertise in the tendering process, leading to a 20% increase in successful bids.</li>
+              <li>Engaged with international clients to present tailored solutions, contributing to a 15% increase in client retention and satisfaction.</li>
+              <li>Oversaw key aspects of commercial operations and supply chain activities, leading to a 10% reduction in supply chain costs.</li>
+              <li>Leveraged various tools to streamline workflows, achieving a 20% improvement in product functionality and project tracking.</li>
+              <li>Created simplified documentation for service level agreements, leading to a 25% reduction in process complexity and time-to-delivery.</li>
+              <li>Developed key performance indicators (KPIs) to assess and track product success, resulting in a 15% improvement in product performance and stakeholder alignment.</li>
+            </ul>
+          </CardContent>
+        </Card>
+      </section>
+
+      <section id="skills" className="py-20 relative">
+        <div className="absolute inset-0 bg-[url('/images/tech-pattern.jpg')] opacity-5 z-0"></div>
+        <div className="relative z-10">
+          <h2 className="text-4xl font-bold mb-10 text-center font-playfair">Skills</h2>
+          <DynamicCarousel />
+        </div>
+      </section>
+
+      <section id="projects" className="py-20 bg-white bg-opacity-80 backdrop-blur-md">
+        <h2 className="text-4xl font-bold mb-10 text-center font-playfair">Projects</h2>
+        <DynamicProjects />
+      </section>
+
+      <section id="education" className="py-20 relative">
+        <div className="absolute inset-0 bg-[url('/images/education-pattern.jpg')] opacity-10 z-0"></div>
+        <div className="relative z-10">
+          <h2 className="text-4xl font-bold mb-10 text-center font-playfair">Education</h2>
+          <Card className="bg-white shadow-xl">
+            <CardHeader>
+              <CardTitle className="text-2xl font-playfair">Bachelor of Technology in Computer Science Engineering</CardTitle>
+              <CardDescription className="text-lg font-montserrat">Rajasthan Technical University, Kota | 2018 - 2022</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p className="font-montserrat">Gained proficient knowledge in Data Structures and Algorithms, DBMS, AI/ML, Blockchain Technology, Cloud Computing, Nature Inspired Algorithms, Social Engineering, SDLCs Model, and Cyber Security.</p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      <section id="accomplishments" className="py-20 bg-white bg-opacity-80 backdrop-blur-md">
+        <h2 className="text-4xl font-bold mb-10 text-center font-playfair">Accomplishments & Certifications</h2>
+        <div className="flex flex-wrap justify-center gap-4">
+          <Badge variant="secondary" className="text-lg py-2 px-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-montserrat">Salesforce Associate Certified (Dec'23)</Badge>
+          <Badge variant="secondary" className="text-lg py-2 px-4 bg-gradient-to-r from-green-500 to-teal-500 text-white font-montserrat">Salesforce AI Associate Certified (Nov'24)</Badge>
+          <Badge variant="secondary" className="text-lg py-2 px-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-montserrat">Marketing in Digital World (Honours) - University of Illinois</Badge>
+          <Badge variant="secondary" className="text-lg py-2 px-4 bg-gradient-to-r from-red-500 to-pink-500 text-white font-montserrat">Student Excellence and Learning Program (Art of Living)</Badge>
+          <Badge variant="secondary" className="text-lg py-2 px-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-montserrat">Certified in User Centric Computing for HCI (NPTEL)</Badge>
+        </div>
+      </section>
+
+      <section id="contact" className="py-20 relative">
+        <div className="absolute inset-0 bg-[url('/images/contact-pattern.jpg')] opacity-10 z-0"></div>
+        <div className="relative z-10">
+          <h2 className="text-4xl font-bold mb-10 text-center font-playfair">Contact Me</h2>
+          <Card className="max-w-md mx-auto bg-white shadow-xl">
+            <CardHeader>
+              <CardTitle className="text-2xl font-playfair">Get in Touch</CardTitle>
+              <CardDescription className="font-montserrat">Feel free to reach out for any inquiries or opportunities.</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <form className="space-y-4">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 font-montserrat">Name</label>
+                  <input type="text" id="name" name="name" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 font-montserrat" required />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 font-montserrat">Email</label>
+                  <input type="email" id="email" name="email" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 font-montserrat" required />
+                </div>
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 font-montserrat">Message</label>
+                  <textarea id="message" name="message" rows={4} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 font-montserrat" required></textarea>
+                </div>
+                <Button type="submit" className="w-full font-montserrat">Send Message</Button>
+              </form>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+    </div>
+  )
+}
+
