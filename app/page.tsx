@@ -16,10 +16,10 @@ export default function Home() {
   return (
     <div className="container mx-auto px-4">
       <section id="about" className="py-20 text-center relative">
-        <div className="absolute inset-0 bg-[url('/images/luxury-pattern.jpg')] opacity-10 z-0"></div>
+        <div className="absolute inset-0 bg-[url('public\background.jpg')] opacity-10 z-0"></div>
         <div className="relative z-10">
           <Image
-            src="/images/profile-photo.jpg"
+            src="public\Profile.jpg"
             alt="Chitralekha Yaduvanshi"
             width={200}
             height={200}
@@ -64,7 +64,7 @@ export default function Home() {
       </section>
 
       <section id="skills" className="py-20 relative">
-        <div className="absolute inset-0 bg-[url('/images/tech-pattern.jpg')] opacity-5 z-0"></div>
+        <div className="absolute inset-0 bg-[url('public\background.jpg')] opacity-5 z-0"></div>
         <div className="relative z-10">
           <h2 className="text-4xl font-bold mb-10 text-center font-playfair">Skills</h2>
           <DynamicCarousel />
@@ -77,7 +77,7 @@ export default function Home() {
       </section>
 
       <section id="education" className="py-20 relative">
-        <div className="absolute inset-0 bg-[url('/images/education-pattern.jpg')] opacity-10 z-0"></div>
+        <div className="absolute inset-0 bg-[url('public\background.jpg')] opacity-10 z-0"></div>
         <div className="relative z-10">
           <h2 className="text-4xl font-bold mb-10 text-center font-playfair">Education</h2>
           <Card className="bg-white shadow-xl">
@@ -104,7 +104,7 @@ export default function Home() {
       </section>
 
       <section id="contact" className="py-20 relative">
-        <div className="absolute inset-0 bg-[url('/images/contact-pattern.jpg')] opacity-10 z-0"></div>
+        <div className="absolute inset-0 bg-[url('public\background.jpg')] opacity-10 z-0"></div>
         <div className="relative z-10">
           <h2 className="text-4xl font-bold mb-10 text-center font-playfair">Contact Me</h2>
           <Card className="max-w-md mx-auto bg-white shadow-xl">
