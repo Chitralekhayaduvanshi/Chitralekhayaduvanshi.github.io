@@ -19,7 +19,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-[url('/background.jpg')] opacity-10 z-0"></div>
         <div className="relative z-10">
           <Image
-            src="public\Profile.jpg"
+            src="/Profile.jpg"
             alt="Chitralekha Yaduvanshi"
             width={200}
             height={200}
