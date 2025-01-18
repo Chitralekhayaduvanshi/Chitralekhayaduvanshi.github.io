@@ -10,7 +10,7 @@ export default function Projects() {
         </CardHeader>
         <CardContent>
           <Image
-            src="public\AML.jpg"
+            src="/AML.jpg"
             alt="Eye disease prediction project"
             width={400}
             height={300}
@@ -25,7 +25,7 @@ export default function Projects() {
         </CardHeader>
         <CardContent>
           <Image
-            src="public\APP.jpg"
+            src="/APP.jpg"
             alt="Amazon price prediction project"
             width={400}
             height={300}

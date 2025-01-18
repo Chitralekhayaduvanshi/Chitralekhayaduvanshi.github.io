@@ -15,29 +15,31 @@ const DynamicProjects = dynamic(() => import('@/components/Projects'), {
 export default function Home() {
   return (
     <div className="container mx-auto px-4">
-      <section id="about" className="py-20 text-center relative">
+      <section id="about" className="py-10 md:py-20 text-center relative">
         <div className="absolute inset-0 bg-[url('/background.jpg')] opacity-10 z-0"></div>
-        <div className="relative z-10">
-          <Image
-            src="public\Profile.jpg"
-            alt="Chitralekha Yaduvanshi"
-            width={200}
-            height={200}
-            className="rounded-full mx-auto mb-6 border-4 border-white shadow-lg"
-          />
-          <h1 className="text-5xl font-bold mb-4 font-playfair">Chitralekha Yaduvanshi</h1>
-          <p className="text-2xl mb-6 font-montserrat font-light">Engineer</p>
-          <div className="flex justify-center space-x-4 mb-8">
-            <Button asChild className="font-montserrat">
-              <a href="mailto:chitralekha813@gmail.com">Contact Me</a>
-            </Button>
-            <Button variant="outline" asChild className="font-montserrat">
-              <a href="https://www.linkedin.com/in/chitralekha-y" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            </Button>
+        <div className="relative z-10 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+            <Image
+              src="/Profile.jpg"
+              alt="Chitralekha Yaduvanshi"
+              width={200}
+              height={200}
+              className="rounded-full mx-auto mb-6 border-4 border-white shadow-lg"
+            />
+            <h1 className="text-5xl font-bold mb-4 font-playfair">Chitralekha Yaduvanshi</h1>
+            <p className="text-2xl mb-6 font-montserrat font-light">Engineer</p>
+            <div className="flex justify-center space-x-4 mb-8">
+              <Button asChild className="font-montserrat">
+                <a href="mailto:chitralekha813@gmail.com">Contact Me</a>
+              </Button>
+              <Button variant="outline" asChild className="font-montserrat">
+                <a href="https://www.linkedin.com/in/chitralekha-y" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              </Button>
+            </div>
+            <p className="max-w-2xl mx-auto text-lg font-montserrat">
+              Experienced Associate Engineer with a focus on leveraging analytical skills, strategic vision, and a user-centric approach to guide products from conception through launch. Skilled in fostering collaboration and driving product success across global teams.
+            </p>
           </div>
-          <p className="max-w-2xl mx-auto text-lg font-montserrat">
-            Experienced Associate Engineer with a focus on leveraging analytical skills, strategic vision, and a user-centric approach to guide products from conception through launch. Skilled in fostering collaboration and driving product success across global teams.
-          </p>
         </div>
       </section>
 
