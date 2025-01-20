@@ -113,7 +113,37 @@ export default function Home() {
               <CardDescription className="font-montserrat">Feel free to reach out for any inquiries or opportunities.</CardDescription>
             </CardHeader>
             <CardContent>
-              <form className="space-y-4">
+              <form className="space-y-4" action={async (formData: FormData) => {
+                'use server'
+                
+                const data = {
+                  name: formData.get('name'),
+                  email: formData.get('email'),
+                  message: formData.get('message'),
+                  timestamp: new Date().toISOString()
+                }
+
+                try {
+                  // You can store this data in your preferred way:
+                  // Option 1: Save to a file
+                  await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                      'Content-Type': 'application/json',
+                      'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({
+                      access_key: '8220b2f9-1129-4f09-b1d8-855fd7823baf', // Get from web3forms.com
+                      ...data
+                    })
+                  })
+
+                  // Show success message
+                  console.log('Message sent successfully!')
+                } catch (error) {
+                  console.error('Error sending message:', error)
+                }
+              }}>
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 font-montserrat">Name</label>
                   <input type="text" id="name" name="name" className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 font-montserrat" required />
@@ -126,7 +156,9 @@ export default function Home() {
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 font-montserrat">Message</label>
                   <textarea id="message" name="message" rows={4} className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 font-montserrat" required></textarea>
                 </div>
-                <Button type="submit" className="w-full font-montserrat">Send Message</Button>
+                <Button type="submit" className="w-full font-montserrat">
+                  Send Message
+                </Button>
               </form>
             </CardContent>
           </Card>
