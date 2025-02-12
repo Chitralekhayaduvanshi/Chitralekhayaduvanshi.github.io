@@ -15,7 +15,24 @@ const DynamicProjects = dynamic(() => import('@/components/Projects'), {
 export default function Home() {
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-       <section id="about" className="py-10 md:py-20 text-center relative">
+      <div className="py-8 md:py-12 relative">
+        <Card className="max-w-3xl mx-auto transform hover:-translate-y-1 transition-transform duration-300 bg-gradient-to-r from-purple-50 to-pink-50 border-none shadow-xl">
+          <CardContent className="p-6 md:p-8">
+            <div className="relative">
+              <div className="absolute -top-4 -left-4 text-6xl text-purple-300 font-serif">"</div>
+              <div className="absolute -bottom-4 -right-4 text-6xl text-pink-300 font-serif rotate-180">"</div>
+              <p className="text-lg md:text-xl text-center font-playfair italic text-gray-700 px-8">
+                The best way to predict the future is to create it.
+              </p>
+              <p className="text-right mt-4 text-sm md:text-base font-montserrat text-gray-600">
+                — Peter Drucker
+              </p>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+
+      <section id="about" className="py-10 md:py-20 text-center relative">
         <div className="absolute inset-0 bg-[url('/background.jpg')] opacity-10 z-0"></div>
         <div className="relative z-10">
           <Image
