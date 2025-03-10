@@ -1,27 +1,34 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { ChevronLeft, ChevronRight, X } from 'lucide-react'
 
-const quotes = [
+interface Quote {
+  text: string;
+  author: string;
+}
+
+const quotes: Quote[] = [
   { text: "The best way to predict the future is to create it.", author: "Peter Drucker" },
   { text: "Innovation distinguishes between a leader and a follower.", author: "Steve Jobs" },
   { text: "Stay hungry, stay foolish.", author: "Stewart Brand" },
+  { text: "Change with time or time will change.", author: "Chitralekha Yaduvanshi" },
+  { text: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
   // Add more quotes here...
 ]
 
-export default function QuoteBoard() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [currentQuote, setCurrentQuote] = useState(0)
+export default function QuoteBoard(): JSX.Element {
+  const [isOpen, setIsOpen] = useState<boolean>(false)
+  const [currentQuote, setCurrentQuote] = useState<number>(0)
 
-  const nextQuote = () => {
-    setCurrentQuote((prev) => (prev + 1) % quotes.length)
+  const nextQuote = (): void => {
+    setCurrentQuote((prev: number) => (prev + 1) % quotes.length)
   }
 
-  const prevQuote = () => {
-    setCurrentQuote((prev) => (prev - 1 + quotes.length) % quotes.length)
+  const prevQuote = (): void => {
+    setCurrentQuote((prev: number) => (prev - 1 + quotes.length) % quotes.length)
   }
 
   return (
