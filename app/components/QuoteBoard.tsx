@@ -11,11 +11,11 @@ interface Quote {
 }
 
 const quotes: Quote[] = [
-  { text: "The best way to predict the future is to create it.", author: "Peter Drucker" },
-  { text: "Innovation distinguishes between a leader and a follower.", author: "Steve Jobs" },
-  { text: "Stay hungry, stay foolish.", author: "Stewart Brand" },
-  { text: "Change with time or time will change.", author: "Chitralekha Yaduvanshi" },
-  { text: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
+  { text: "There are always 3 stories: your story, my story and THE story.", author: "Chiya" },
+  { text: "My present is always better than past.", author: "Chiya" },
+  { text: "The more truthful you are, more happier you'll be.", author: "Chiya" },
+  { text: "Change with time or time will change.", author: "Chiya" },
+  { text: "There will be someone better than you and dumber than you, so BE you!", author: "Chiya" },
   // Add more quotes here...
 ]
 
