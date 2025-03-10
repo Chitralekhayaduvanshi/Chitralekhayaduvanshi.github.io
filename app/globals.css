@@ -4,10 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -80,7 +76,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground font-montserrat;
+    @apply bg-background text-foreground;
   }
 }
 
