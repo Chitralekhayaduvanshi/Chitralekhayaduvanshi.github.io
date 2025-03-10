@@ -47,7 +47,7 @@ export default function Home() {
             className="rounded-full mx-auto mb-4 md:mb-6 border-4 border-white shadow-lg w-32 h-32 md:w-48 md:h-48 lg:w-64 lg:h-64"
           />
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-4 font-playfair">Chitralekha Yaduvanshi</h1>
-          <p className="text-xl md:text-2xl mb-4 md:mb-6 font-montserrat font-light">Engineer</p>
+          <p className="text-xl md:text-2xl mb-4 md:mb-6 font-montserrat font-light">Investor</p>
           <div className="flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-4 mb-6 md:mb-8">
             <Button asChild className="font-montserrat w-full sm:w-auto">
               <a href="mailto:chitralekha813@gmail.com">Contact Me</a>
