@@ -12,7 +12,7 @@ const DynamicProjects = dynamic(() => import('@/components/Projects'), {
   loading: () => <p>Loading projects...</p>,
 })
 
-const DynamicQuoteBoard = dynamic(() => import('@/components/QuoteBoard'), {
+const DynamicQuoteBoard = dynamic(() => import('./components/QuoteBoard'), {
   ssr: false,
   loading: () => null,
 })

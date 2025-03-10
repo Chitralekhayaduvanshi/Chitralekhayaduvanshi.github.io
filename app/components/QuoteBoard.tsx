@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import * as React from 'react'
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { ChevronLeft, ChevronRight, X } from 'lucide-react'
@@ -19,16 +19,16 @@ const quotes: Quote[] = [
   // Add more quotes here...
 ]
 
-export default function QuoteBoard(): JSX.Element {
-  const [isOpen, setIsOpen] = useState<boolean>(false)
-  const [currentQuote, setCurrentQuote] = useState<number>(0)
+export default function QuoteBoard() {
+  const [isOpen, setIsOpen] = React.useState(false)
+  const [currentQuote, setCurrentQuote] = React.useState(0)
 
-  const nextQuote = (): void => {
-    setCurrentQuote((prev: number) => (prev + 1) % quotes.length)
+  const nextQuote = () => {
+    setCurrentQuote((prev) => (prev + 1) % quotes.length)
   }
 
-  const prevQuote = (): void => {
-    setCurrentQuote((prev: number) => (prev - 1 + quotes.length) % quotes.length)
+  const prevQuote = () => {
+    setCurrentQuote((prev) => (prev - 1 + quotes.length) % quotes.length)
   }
 
   return (
