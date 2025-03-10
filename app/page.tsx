@@ -12,9 +12,15 @@ const DynamicProjects = dynamic(() => import('@/components/Projects'), {
   loading: () => <p>Loading projects...</p>,
 })
 
+const DynamicQuoteBoard = dynamic(() => import('@/components/QuoteBoard'), {
+  loading: () => null,
+})
+
 export default function Home() {
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <DynamicQuoteBoard />
+      
       <div className="py-8 md:py-12 relative">
         <Card className="max-w-3xl mx-auto transform hover:-translate-y-1 transition-transform duration-300 bg-gradient-to-r from-purple-50 to-pink-50 border-none shadow-xl">
           <CardContent className="p-6 md:p-8">
