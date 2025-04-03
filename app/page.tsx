@@ -26,10 +26,10 @@ export default function Home() {
               <div className="absolute -top-4 -left-4 text-6xl text-purple-300 font-serif">"</div>
               <div className="absolute -bottom-4 -right-4 text-6xl text-pink-300 font-serif rotate-180">"</div>
               <p className="text-lg md:text-xl text-center font-playfair italic text-gray-700 px-8">
-              A leader is one who knows the way, goes the way, and shows the way". ~John C. Maxwell
+              A leader is one who knows the way, goes the way, and shows the way". 
               </p>
               <p className="text-right mt-4 text-sm md:text-base font-montserrat text-gray-600">
-                — Chitralekha Yaduvanshi
+              ~John C. Maxwell
               </p>
             </div>
           </CardContent>
